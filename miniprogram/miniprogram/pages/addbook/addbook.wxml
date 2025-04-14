@@ -1,0 +1,26 @@
+<view class="add-book-container">
+  <!-- 上传封面 -->
+  <view class="cover-upload">
+    <view class="cover-upload-dashed" bindtap="chooseImage" wx:if="{{!cover}}">
+      <text>+</text>
+    </view>
+    <image src="{{cover}}" mode="aspectFit" bindtap="chooseImage" wx:if="{{cover}}"></image>
+    <button bindtap="chooseImage" wx:if="{{!cover}}">上传封面</button>
+  </view>
+  <!-- 书籍信息输入 -->
+  <view class="book-info">
+    <input type="text" placeholder="书籍名称" bindinput="handleBookNameInput" value="{{bookName}}"/>
+    <input type="text" placeholder="作者" bindinput="handleAuthorInput" value="{{author}}"/>
+    <!-- 修改为 picker 组件 -->
+    <picker mode="date" value="{{readingTime}}" start="2000-01-01" end="2099-12-31" bindchange="handleReadingTimeInput">
+      <view class="picker">
+        {{readingTime || '请选择阅读时间'}}
+      </view>
+    </picker>
+  </view>
+  <!-- 保存和删除按钮 -->
+  <view class="button-group">
+    <button bindtap="saveBook">保存</button>
+    <button bindtap="deleteBook" wx:if="{{editIndex !== -1}}">删除</button>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+.add-book-container {
+  padding: 20px;
+  background-image: url('your-bookshelf-image-url'); 
+  background-size: cover; 
+  background-position: center; 
+  min-height: 100vh; 
+}
+
+.cover-upload {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cover-upload-dashed {
+  width: 200px;
+  height: 300px;
+  border: 2px dashed #ccc;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.cover-upload image {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.book-info input,
+.book-info .picker-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px; /* 添加圆角，使样式更美观 */
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-group button {
+  margin: 0 10px;
+}

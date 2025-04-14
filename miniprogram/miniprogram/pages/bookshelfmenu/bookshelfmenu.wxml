@@ -1,0 +1,11 @@
+<view class="menu" bindtap="toggleMenu">
+    <text>≡</text>
+</view>
+<view class="menu-list" wx:if="{{isMenuOpen}}">
+    <view bindtap="sortBooksAsc">从早到晚</view>
+    <view bindtap="sortBooksDesc">从晚到早</view>
+    <view class="progress-bar-container">
+        <text>每行书籍数量: {{booksPerRow}}</text>
+        <slider min="2" max="5" value="{{booksPerRow}}" bindchange="handleBooksPerRowChange"/>
+    </view>
+</view>

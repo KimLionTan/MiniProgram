@@ -1,0 +1,31 @@
+.menu {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-list {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
+  width: 200px; /* 可按需调整宽度 */
+  display: block; /* 改成块级显示，让菜单项换行 */
+}
+
+.menu-list view {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee; /* 给每个菜单项添加下边框，增强分隔感 */
+}
+
+.menu-list view:last-child {
+  border-bottom: none; /* 最后一个菜单项去掉下边框 */
+}
+
+.progress-bar-container {
+  margin-top: 10px;
+  padding: 10px;
+}

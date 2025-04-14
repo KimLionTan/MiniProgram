@@ -1,0 +1,137 @@
+@keyframes flow {
+  0% {
+    background-position: 
+      -80vmax -80vmax,
+      -100vmax 90vmax,
+      -90vmax -10vmax,
+      -60vmax 20vmax,
+      60vmax 60vmax;
+  }
+  100% {
+    background-position: 
+      80vmax 80vmax,
+      100vmax -90vmax,
+      90vmax 10vmax,
+      60vmax -20vmax,
+      -60vmax -60vmax;
+  }
+}
+
+.warp {
+  width: 100%;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(closest-side, rgba(255, 223, 88, 0.2), rgba(255, 223, 88, 0)), /* 黄色渐变 */
+    radial-gradient(closest-side, rgba(255, 205, 100, 0.2), rgba(255, 205, 100, 0)), /* 浅黄色渐变 */
+    radial-gradient(closest-side, rgba(255, 228, 132, 0.2), rgba(255, 228, 132, 0)), /* 柔和的黄色 */
+    radial-gradient(closest-side, rgba(255, 240, 150, 0.2), rgba(255, 240, 150, 0)), /* 更亮的黄色 */
+    radial-gradient(closest-side, rgba(255, 250, 200, 0.2), rgba(255, 250, 200, 0)); /* 非常浅的黄色 */
+  background-size:
+    130vmax 130vmax,
+    100vmax 100vmax,
+    90vmax 90vmax,
+    120vmax 110vmax,
+    80vmax 80vmax;
+  background-position:
+    -80vmax -80vmax,
+    -100vmax 90vmax,
+    -90vmax -10vmax,
+    -60vmax 20vmax,
+    60vmax 60vmax;
+  position: relative;
+  z-index: 1;
+  animation: flow 10s linear infinite;
+}
+
+.container {
+  width: 90%;
+  min-height: 100vh;
+  /* background-color: yellowgreen; */
+  margin: auto;
+}
+
+/* 头部 */
+.header {
+  width: 100%;
+  height: 100rpx;
+  /* background-color: blueviolet; */
+  margin-top: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 270rpx;
+  height: 160rpx;
+}
+.logo image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.role {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.role image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* banner */
+.banner {
+  width: 100%;
+  height: 700rpx;
+  /* background-color: brown; */
+  margin-top: 40rpx;
+
+}
+.banner image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* info */
+.info {
+  width: 100%;
+  height: 360rpx;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 60rpx;
+  box-shadow: 0 0 40rpx 10rpx rgba(0,0,0,0.08);
+}
+.info-item {
+  width: 90%;
+  height: 100rpx;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-radius: 100rpx;
+  box-shadow: 0 0 40rpx 10rpx rgba(0,0,0,0.02);
+
+}
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.icon image {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+}
+.text {
+  flex: 1;
+  padding-left: 20rpx;
+}
+/* menu */
+.menu{
+ width: 100%;
+ height: 80rpx;
+}

@@ -1,0 +1,73 @@
+<!-- postList.wxml -->
+<view class="container">
+  <!-- 帖子列表 -->
+  <block wx:for="{{posts}}" wx:key="_id">
+    <view class="post-card">
+      <!-- 帖子内容 -->
+      <view class="post-content">
+        <text class="username">{{item.author}}</text>
+        <text class="time">{{formatTime(item.createTime)}}</text>
+        <text class="text-content">{{item.content}}</text>
+        <!-- 图片展示 -->
+        <block wx:for="{{item.images}}" wx:key="url">
+          <image src="{{item.url}}" mode="aspectFill" class="post-image"/>
+        </block>
+        <!-- 评论入口 -->
+        <button class="comment-btn" bindtap="toggleComments" data-id="{{item._id}}">
+          <text class="comment-count">{{item.comments.length}}条评论</text>
+        </button>
+        
+        <!-- 评论列表 -->
+        <view class="comment-list" a:if="{{showComments[item._id]}}">
+          <block wx:for="{{item.comments}}" wx:key="_id">
+            <view class="comment-item">
+              <view class="user-info">
+                <text class="nickname">{{item.commenter}}</text>
+                <text class="time">{{formatTime(item.commentTime)}}</text>
+              </view>
+              <view class="comment-content">
+                {{item.commentContent}}
+                <!-- 回复标记 -->
+                <view wx:if="{{item.replyTo}}" class="reply-tag">
+                  回复 @{{item.replyTo}}
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <!-- 输入区域 -->
+      <view class="input-area" hidden="{{!showComments[item._id]}}">
+        <view class="mention-list" a:if="{{mentionList.length}}">
+          <block wx:for="{{mentionList}}" wx:key="id">
+            <view class="mention-item" bindtap="insertMention" data-user="{{item.name}}">
+              {{item.name}}
+            </view>
+          </block>
+        </view>
+        
+        <textarea 
+          class="comment-input"
+          placeholder="写下你的评论..."
+          value="{{inputValue}}"
+          bindinput="onInput"
+          maxlength="300"
+          bindconfirm="submitComment"
+        />
+        
+        <view class="toolbar">
+          <button class="emoji-btn" bindtap="toggleEmojiPicker">😊</button>
+          <button class="send-btn" bindtap="submitComment">发送</button>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 表情面板 -->
+  <view class="emoji-panel" hidden="{{!showEmoji}}">
+    <block wx:for="{{emojis}}" wx:key="unicode">
+      <emoji emoji="{{item.unicode}}" bindtap="insertEmoji"/>
+    </block>
+  </view>
+</view>

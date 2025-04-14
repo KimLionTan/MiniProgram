@@ -1,0 +1,32 @@
+<view class="warp">
+  <view class="container">
+    <!-- 表单 -->
+    <view class="form">
+      <view class="role" bindtap="upload" wx:if="{{person}}">
+        <image src="{{imgurl}}" mode="" />
+      </view>
+      <view class="role" bindtap="upload" wx:else="">
+        <image src="{{imgurl}}" mode="" />
+      </view>
+      <view class="inputs">
+        <!-- 姓名 -->
+        <view class="item">
+          <view class="title">姓名</view>
+          <input type="text" placeholder-class="placeholder-style" value='{{username}}' bindinput="getUsername"/>
+        </view>
+        <!-- 学号 -->
+        <view class="item">
+          <view class="title">学号</view>
+          <input type="text" placeholder-class="placeholder-style" value='{{userid}}' bindinput="getUserid"/>
+        </view>
+        <!-- 邮箱 -->
+        <view class="item">
+          <view class="title">邮箱</view>
+          <input type="text" placeholder-class="placeholder-style" value='{{usermail}}' bindinput="getUsermail"/>
+        </view>
+      </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="btn" bindtap="save">保存并登录</view>
+  </view>
+</view>

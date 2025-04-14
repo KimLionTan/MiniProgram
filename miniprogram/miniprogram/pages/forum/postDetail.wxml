@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- 帖子内容框 -->
+  <view class="post-box">
+    <!-- 用户信息 -->
+    <view class="user-info">
+      <image src="{{post.avatar}}" class="user-avatar"></image>
+      <view class="user-details">
+        <text class="username">{{post.username}}</text>
+        <text class="post-time">{{post.createTime}}</text>
+      </view>
+    </view>
+
+    <!-- 帖子内容 -->
+    <view class="post-content-box">
+      <text class="post-title">{{post.title}}</text>
+      <view class="spacer"></view>
+      <text class="post-content">{{post.content}}</text>
+    </view>
+
+    <!-- 帖子图片 -->
+    <block wx:if="{{post.images && post.images.length > 0}}">
+      <image wx:for="{{post.images}}" wx:key="*this" src="{{item}}" mode="aspectFill" class="post-image"></image>
+    </block>
+    <!-- 评论列表 -->
+    <view class="comments-section">
+      <view wx:for="{{post.comments}}" wx:key="commentId">
+        <text>{{item.commenter}}：{{item.commentContent}}</text>
+      </view>
+    </view>
+    <!-- 评论输入框和按钮 -->
+    <view class="comment-input-section">
+      <input placeholder="追加评论" bindinput="bindCommentInput" value="{{commentInput}}"/>
+      <button bindtap="addComment">评论</button>
+    </view>
+  </view>
+
+  <!-- 点赞按钮 -->
+  <view class="like-section">
+    <button class="like-button" bindtap="likePost">
+      <image src="/images/like-icon.png" class="like-icon"></image>
+      <text>{{post.likeCount || 0}}</text>
+    </button>
+  </view>
+</view> 

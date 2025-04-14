@@ -1,0 +1,62 @@
+<view class="warp">
+  <view class="container">
+    <!-- 头部 -->
+    <view class="header">
+      <view class="logo">
+        <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/logo.png?sign=7be639d2437cf05d2facff666deeba1c&t=1724675221" mode="" />
+      </view>
+      <view class="role" bindtap="navigateToInfo" wx:if="{{person}}">
+        <image src="{{imgurl}}" mode="" />
+      </view>
+      <view class="role" bindtap="navigateToInfo" wx:else>
+        <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E7%94%A8%E6%88%B7.png?sign=709792217e10d48a10ca0894618a881c&t=1725252735" mode="" />
+      </view>
+    </view>
+    <!-- banner -->
+    <view class="banner">
+      <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/banner.png?sign=2d0eca3e6e4f22da7d56ca00cf786055&t=1724675254" mode="" />
+    </view>
+    <!-- info -->
+    <view class="info">
+      <view class="info-item">
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%B0%8F%E6%9F%AF%E5%9F%BA.png?sign=eca8c58c1ba81c1a47f64667050c3580&t=1724675292" mode="" />
+        </view>
+        <view class="text">个人信息</view>
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%90%91%E5%8F%B3.png?sign=fcbd059fc8bd97a4c1eaf96a6ce98fcf&t=1724675303" mode="" />
+        </view>
+      </view>
+      <view class="info-item">
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E4%B9%A6%E7%AD%BE.png?sign=50d6815aa909d17230b3ace666b26793&t=1724675342" mode="" />
+        </view>
+        <view class="text">图书中心</view>
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%90%91%E5%8F%B3.png?sign=fcbd059fc8bd97a4c1eaf96a6ce98fcf&t=1724675303" mode="" />
+        </view>
+      </view>
+    </view>
+    <view class="info">
+      <view class="info-item"  bindtap="navigateToAi">
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E6%99%BA%E6%85%A7%E5%8A%A9%E6%89%8B.png?sign=f389550545675d671570eac18ecc7800&t=1724675273" mode="" />
+        </view>
+        <view class="text">阅读助手</view>
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%90%91%E5%8F%B3.png?sign=fcbd059fc8bd97a4c1eaf96a6ce98fcf&t=1724675303" mode="" />
+        </view>
+      </view>
+      <view class="info-item" bindtap="navigateToForum">
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%B0%8F%E9%A3%8E%E8%BD%A6.png?sign=401a44c9138bbb4060d8cb8ffcbca082&t=1724675323" mode="" />
+        </view>
+        <view class="text">一起交流</view>
+        <view class="icon">
+          <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%90%91%E5%8F%B3.png?sign=fcbd059fc8bd97a4c1eaf96a6ce98fcf&t=1724675303" mode="" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="menu"></view>
+</view>

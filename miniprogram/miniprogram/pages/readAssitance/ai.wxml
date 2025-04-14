@@ -1,0 +1,31 @@
+<view class="warp">
+  <view class="container">
+    <!-- 对话显示区域 -->
+    <view class="chat-log">
+      <block wx:for="{{messages}}" wx:key="index">
+        <!-- 用户消息 -->
+        <view wx:if="{{item.type === 'user'}}" class="message user">
+          <image class="avatar" src="{{imgurl}}" mode="aspectFill" />
+          <view class="bubble">{{item.content}}</view>
+        </view>
+
+        <!-- 机器人消息 -->
+        <view wx:if="{{item.type === 'bot'}}" class="message bot">
+          <image class="avatar" src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E6%9C%BA%E5%99%A8%E4%BA%BA.png?sign=50317dc0a21d66d99581b578d29e2689&t=1725870046" mode="aspectFill" />
+          <view class="bubble">{{item.content}}</view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 表单 -->
+    <view class="form">
+      <view class="inputs">
+        <view class="item">
+          <input type="text" placeholder-class="placeholder-style" value="{{inputMessage}}" bindinput="bindInput" />
+        </view>
+      </view>
+      <!-- 提交按钮 -->
+      <view class="btn" bindtap="sendMessage">提交</view>
+    </view>
+  </view> 
+</view>

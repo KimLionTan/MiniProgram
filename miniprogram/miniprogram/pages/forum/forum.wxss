@@ -1,0 +1,166 @@
+.container {
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.post-list {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.post-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.post-item text {
+  display: block;
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.post-item text:first-child {
+  font-size: 18px;
+  font-weight: 500;
+  color: #212529;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.image-container image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.add-post-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: auto;
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff7c62 0%, #ffc77f 100%);
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.add-post-button:active {
+  transform: scale(0.95);
+}
+
+.post-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.post-form input, 
+.post-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  border-color: #6a11cb;
+  outline: none;
+}
+
+.post-form textarea {
+  min-height: 120px;
+}
+
+.post-form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff7c62 0%, #ffc77f 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.post-form button:active {
+  transform: scale(0.98);
+}
+
+.post-form button[bindtap="chooseImage"] {
+  background: linear-gradient(90deg, #ff7c62 0%, #ffc77f 100%);
+  margin-bottom: 15px;
+}
+
+.image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.image-preview {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.action-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.comment-entry {
+  display: flex;
+  align-items: center;
+}

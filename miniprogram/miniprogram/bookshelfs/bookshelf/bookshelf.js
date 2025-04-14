@@ -61,7 +61,7 @@ Page({
       const index = e.currentTarget.dataset.index;
       const book = this.data.books[index];
       wx.navigateTo({
-          url: `/pages/addbook/addbook?index=${index}&cover=${book.cover}&bookName=${book.bookName}&author=${book.author}&readingTime=${book.readingTime}`
+          url: `/MiniProgram/miniprogram/miniprogram/bookshelfs/addbook/addbook?index=${index}&cover=${book.cover}&bookName=${book.bookName}&author=${book.author}&readingTime=${book.readingTime}`
       });
   },
   hideBookInfoOnBlank(e) {
@@ -140,7 +140,7 @@ Page({
   },
   goToHistoryPage() {
       wx.navigateTo({
-          url: '/pages/history/history',
+          url: '/MiniProgram/miniprogram/miniprogram/bookshelfs/history/history',
           success: function () {
               console.log('成功跳转到历史记录页面');
           },

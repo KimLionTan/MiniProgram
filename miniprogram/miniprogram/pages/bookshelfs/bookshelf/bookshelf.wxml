@@ -1,0 +1,30 @@
+<view class="bookshelf-container" bindtap="handleOutsideClick">
+    <view class="history-menu-icons">
+        <view class="history-icon" bindtap="goToHistoryPage">
+            <text>🕒</text>
+        </view>
+        <bookshelf-menu
+            custom-class="menu-component"
+            isMenuOpen="{{isMenuOpen}}"
+            booksPerRow="{{booksPerRow}}"
+            sortType="{{sortType}}"
+            bind:toggleMenu="toggleMenu"
+            bind:sortBooksAsc="sortBooksAsc"
+            bind:sortBooksDesc="sortBooksDesc"
+            bind:handleBooksPerRowChange="handleBooksPerRowChange"
+        ></bookshelf-menu>
+    </view>
+    <view class="book-list">
+        <view wx:for="{{books}}" wx:key="index" class="book-item" style="width: {{100 / booksPerRow}}%;">
+            <image src="{{item.cover}}" mode="aspectFit" bindtap="showBookInfo" data-index="{{index}}"></image>
+            <view class="book-info-popup" wx:if="{{showInfoIndex === index}}" bindtap="goToEditBookPage" data-index="{{index}}" style="font-size: {{14 - (booksPerRow - 2) * 2}}px;">
+                <view>书名: {{item.bookName}}</view>
+                <view>作者: {{item.author}}</view>
+                <view>阅读时间: {{item.readingTime}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="add-book-button" bindtap="goToAddbookPage">
+        <text>+</text>
+    </view>
+</view>

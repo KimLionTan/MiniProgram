@@ -1,0 +1,107 @@
+.history-container {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #007aff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+}
+
+.timeline-item {
+  margin: 0 50px;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #007aff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-date {
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+}
+
+.timeline-date.top {
+  top: -30px;
+  text-align: center;
+}
+
+.timeline-date.bottom {
+  bottom: -30px;
+  text-align: center;
+}
+
+.book-cover {
+  width: 60px; 
+  height: 90px; 
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.book-cover.top {
+  top: -120px;
+}
+
+.book-cover.bottom {
+  bottom: -120px;
+}
+
+.book-info-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -5,7 +5,10 @@
     "pages/readAssitance/ai",
     "pages/forum/postList",
     "pages/forum/forum",
-    "pages/forum/postDetail"
+    "pages/forum/postDetail",
+    "pages/bookshelf/bookshelf",
+    "pages/addbook/addbook",
+    "pages/history/history"
   ],
   "window": {
     "backgroundColor": "#FFF",

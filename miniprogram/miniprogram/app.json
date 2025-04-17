@@ -6,9 +6,10 @@
     "pages/forum/postList",
     "pages/forum/forum",
     "pages/forum/postDetail",
-    "pages/bookshelf/bookshelf",
-    "pages/addbook/addbook",
-    "pages/history/history"
+    "pages/bookshelfs/bookshelf",
+    "pages/bookshelfs/addbook",
+    "pages/bookshelfs/history",
+    "pages/bookshelfs/bookshelfmenu"
   ],
   "window": {
     "backgroundColor": "#FFF",

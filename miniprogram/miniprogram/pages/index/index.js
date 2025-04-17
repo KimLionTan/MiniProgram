@@ -15,6 +15,11 @@ Page({
       url: '/pages/readAssitance/ai', // 确保路径正确
     });
   },
+  navigateToBookshelf() {
+    wx.navigateTo({
+      url: '/pages/bookshelfs/bookshelf',// 导航到书架页面
+    });
+  },
   navigateToForum() {
     wx.navigateTo({
       url: '/pages/forum/postList' // 导航到帖子列表页面

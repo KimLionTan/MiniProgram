@@ -27,7 +27,7 @@
           <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E5%90%91%E5%8F%B3.png?sign=fcbd059fc8bd97a4c1eaf96a6ce98fcf&t=1724675303" mode="" />
         </view>
       </view>
-      <view class="info-item">
+      <view class="info-item" bindtap="navigateToBookshelf">
         <view class="icon">
           <image src="https://6c61-laocangshu-3ga11gxx8e84a6f2-1327579794.tcb.qcloud.la/images/%E4%B9%A6%E7%AD%BE.png?sign=50d6815aa909d17230b3ace666b26793&t=1724675342" mode="" />
         </view>
